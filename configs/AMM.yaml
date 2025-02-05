@@ -1,0 +1,19 @@
+class_path: src.module.AMM
+init_args:
+  # DataModule
+  dataset: null #required
+  data_dir: null #required
+  num_workers: 16
+  batch_size_train: 64
+  batch_size_test: 64
+  # ERM
+  model: null #required
+  activation_fn: None
+  softplus_beta: 10
+  learning_rate: 1e-5
+  freeze_bn: true
+  # AMM
+  h_method: "grad-cam"
+  f_loss: "location"
+  h_lambda: 1
+  h_target_layer: null #required

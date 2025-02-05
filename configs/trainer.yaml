@@ -1,0 +1,29 @@
+accelerator: gpu
+devices: 1
+precision: 32-true
+max_epochs: 1
+log_every_n_steps: 30
+check_val_every_n_epoch: 1
+inference_mode: false
+logger:
+  class_path: lightning.pytorch.loggers.neptune.NeptuneLogger
+  init_args:
+    api_key: null # required
+    project: null # required
+    log_model_checkpoints: false
+    name: temp # optional
+  dict_kwargs:
+    capture_stdout: false
+callbacks: 
+  # checkpoint_callback
+  - class_path : lightning.pytorch.callbacks.model_checkpoint.ModelCheckpoint
+    init_args:
+      dirpath: null
+      monitor: "valid_acc"
+      mode: "max"
+      filename: "checkpt-{epoch:02d}-{valid_acc:.3f}"
+      save_last: true
+      save_weights_only: true
+  - class_path : lightning.pytorch.callbacks.LearningRateMonitor
+    init_args:
+      logging_interval: "step"
