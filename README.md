@@ -14,7 +14,7 @@
 
  
 ## Description
-This repository provides a new implementation of the paper Fooling Neural Network Interpretations via Adversarial Model Manipulation (https://arxiv.org/abs/1902.02041). It includes code for fooling deep neural networks, including recently published architectures, as well as various CAM-based interpretation methods implemented in the TorchCAM (https://github.com/frgfm/torch-cam) repository. The implementation is built using PyTorch Lightning.
+This repository provides a new implementation of the paper Fooling Neural Network Interpretations via Adversarial Model Manipulation (https://arxiv.org/abs/1902.02041, https://github.com/rmrisforbidden/Fooling_Neural_Network-Interpretations). It includes code for fooling deep neural networks, including recently published architectures, as well as various CAM-based interpretation methods implemented in the TorchCAM (https://github.com/frgfm/torch-cam) repository. The implementation is built using PyTorch Lightning.
 
 ## Things to do before running
 
